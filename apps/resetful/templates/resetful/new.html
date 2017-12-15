@@ -1,0 +1,20 @@
+<html>
+<h2>New user</h2>      <form action='/users/create' method='POST'>
+  {% csrf_token %}
+  <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
+  <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
+  <label for="email">Email:<input type="text" name="email" id="email"></label>
+  <label for="password">Password:<input type="password" name="password" id="password"></label>
+  <label for="password">Confirm Password:<input type="password" name="cpassword" id="cpassword"></label>
+  <input type="submit" value="Create">
+</form>
+<a href="/users">Go Back</a>
+
+<h2>I registered before, please login</h2>
+<form action='/users/login' method='POST'>
+  {% csrf_token %} 
+  <label for="email">Email:<input type="text" name="email" id="email"></label>
+  <label for="password">Password:<input type="password" name="password" id="password"></label>
+  <input type="submit" value="login">
+</form>
+</html>

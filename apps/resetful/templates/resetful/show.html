@@ -1,0 +1,16 @@
+<html>
+    <head>
+      <title>Users</title>
+    </head>
+    <body>
+<!-- we can use the line below to see all of our data in our template -->
+<!--{{ all_users }}-->
+<!-- with all the data we can then construct a more structured output -->
+   <p>First Name: {{ single_user.first_name }}</p>
+   <p>Last Name: {{ single_user.last_name }}</p>
+   <p>Email: {{ single_user.email }}</p>
+   <p><a href="/users/{{single_user.id}}/edit">Edit</a> <a href="/users/{{single_user.id}}/destroy">Delete</a>
+
+   <hr>
+</body>
+</html>

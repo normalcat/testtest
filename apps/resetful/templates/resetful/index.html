@@ -1,0 +1,20 @@
+<html>
+    <head>
+      <title>Users</title>
+    </head>
+    <body>
+<!-- we can use the line below to see all of our data in our template -->
+<!--{{ all_users }}-->
+<h1>These are all registered users!</h1>
+<!-- with all the data we can then construct a more structured output -->
+{% for user in all_users %}
+   <p>First Name: {{ user.first_name }}</p>
+   <p>Last Name: {{ user.last_name }}</p>
+   <p>Email: {{ user.email }}</p>
+   <p>Password: {{ user.password}}</p>
+   <p><a href="/users/{{user.id}}">Show</a> <a href="/users/{{user.id}}/edit">Edit</a> <a href="/users/{{user.id}}/destroy">Delete</a></p>
+   <hr>
+{% endfor %}
+<a href="/users/new">Add a newe user</a>
+</body>
+</html>

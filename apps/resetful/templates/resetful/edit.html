@@ -1,0 +1,7 @@
+<h2>Edit user</h2>      <form action='/users/update' method='POST'>
+    {% csrf_token %}
+    <label for="first_name">First Name:<input type="text" name="first_name" id="first_name" value={{single_user.first_name}}></label>
+    <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name" value={{single_user.last_name}}></label>
+    <label for="email">Email:<input type="text" name="email" id="email" value={{single_user.email}}></label>
+    <input type="hidden" name="id" value={{single_user.id}}>
+    <input type="submit" value="Edit">
